@@ -1,50 +1,65 @@
 [
     {
         "title": "Đà Lạt",
+        "album": "dalat",
         "des": "",
         "created": "20-12-2002",
-        "urls": ["phanrang.jpg"]
+        "urls": ["0"]
     },
     {
         "title": "Đà Nẵng",
+        "album": "danang",
         "des": "",
         "created": "20-12-2002",
-       "urls": ["/albums/phanrang.jpg"]
+       "urls": ["0"]
     },
     {
         "title": "Huế",
+        "album": "hue",
         "des": "",
         "created": "20-12-2002",
-        "urls": ["phanrang.jpg"]
+        "urls": ["0"]
     },
     {
         "title": "Phú Quý",
+        "album": "phuquy",
         "des": "",
         "created": "20-12-2002",
-        "urls": ["phanrang.jpg"]
+        "urls": ["0"]
     },
     {
         "title": "Phú Quốc",
+        "album": "phuquoc",
         "des": "",
         "created": "20-12-2002",
-        "urls": ["phanrang.jpg"]
+        "urls": ["0"]
     },
     {
         "title": "Cà Mau",
+        "album": "camau",
         "des": "",
         "created": "20-12-2002",
-        "urls": ["phanrang.jpg"]
+        "urls": ["0"]
     },
     {
         "title": "Phú Yên",
+        "album": "phuyen",
         "des": "",
         "created": "20-12-2002",
-        "urls": ["phanrang.jpg"]
+        "urls": ["0"]
     },
     {
         "title": "Phan Rang",
+        "album": "phanrang",
         "des": "",
         "created": "20-12-2002",
-        "urls": ["phanrang.jpg"]
+        "urls": ["0"]
+    },
+    {
+        "title": "Sài Gòn",
+        "album": "saigon",
+        "des": "",
+        "created": "20-12-2002",
+        "urls": ["0"]
     }
 ]
