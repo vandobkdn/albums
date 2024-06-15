@@ -3,7 +3,7 @@ import albums from './resource/images.json';
 
 function App() {
   return (
-    <div className="h-screen w-full p-5 md:p-16 bg-white">
+    <div className="h-full w-full p-5 md:p-16 bg-white">
       <header className="h-[5em] w-full flex justify-start xs:justify-center sm:justify-center md:justify-start">
         <h1 className="font-normal text-2xl">Bé 🐼 ❤️ Anh 😍</h1>
       </header>
