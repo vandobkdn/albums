@@ -26,6 +26,10 @@ export default {
           dark: '#000000',
           light: '#666666',
         },
+        blue: {
+          DEFAULT: '#1F4788',
+          dark: '#003171',
+        },
       }
     },
   },

@@ -9,3 +9,13 @@ html {
 p {
   @apply font-secondary;
 }
+
+.activeLinks {
+  @apply text-blue;
+  
+  &::after {
+    content: '';
+    width: 100%;
+    border: 1px solid green;
+  }
+}
