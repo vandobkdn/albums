@@ -1,65 +1,65 @@
 [
     {
-        "title": "Đà Lạt",
+        "name": "Đà Lạt",
         "album": "dalat",
         "des": "",
         "created": "20-12-2002",
-        "urls": ["0"]
+        "size": 1
     },
     {
-        "title": "Đà Nẵng",
+        "name": "Đà Nẵng",
         "album": "danang",
         "des": "",
         "created": "20-12-2002",
-       "urls": ["0"]
+        "size": 1
     },
     {
-        "title": "Huế",
+        "name": "Huế",
         "album": "hue",
         "des": "",
         "created": "20-12-2002",
-        "urls": ["0"]
+        "size": 1
     },
     {
-        "title": "Phú Quý",
+        "name": "Phú Quý",
         "album": "phuquy",
         "des": "",
         "created": "20-12-2002",
-        "urls": ["0"]
+        "size": 1
     },
     {
-        "title": "Phú Quốc",
+        "name": "Phú Quốc",
         "album": "phuquoc",
         "des": "",
         "created": "20-12-2002",
-        "urls": ["0"]
+        "size": 1
     },
     {
-        "title": "Cà Mau",
+        "name": "Cà Mau",
         "album": "camau",
         "des": "",
         "created": "20-12-2002",
-        "urls": ["0"]
+        "size": 1
     },
     {
-        "title": "Phú Yên",
+        "name": "Phú Yên",
         "album": "phuyen",
         "des": "",
         "created": "20-12-2002",
-        "urls": ["0"]
+        "size": 1
     },
     {
-        "title": "Phan Rang",
+        "name": "Phan Rang",
         "album": "phanrang",
         "des": "",
         "created": "20-12-2002",
-        "urls": ["0"]
+        "size": 1
     },
     {
-        "title": "Sài Gòn",
+        "name": "Sài Gòn",
         "album": "saigon",
         "des": "",
         "created": "20-12-2002",
-        "urls": ["0"]
+        "size": 1
     }
 ]
