@@ -1,7 +1,251 @@
+import Image from './Image';
+
 export default function () {
   return (
-    <main className="grid gap-x-4 gap-y-20 xs:gap-y-5 sm:gap-y-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-      Wedding
+    <main className="grid grid-cols-6 gap-2 xs:gap-y-5 text-sm">
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-4 row-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-3"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-3"
+      />
+
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-4 row-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-3"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-3"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image src={`/albums/wedding/0.jpg`} alt="wedding" />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image src={`/albums/wedding/0.jpg`} alt="wedding" />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image src={`/albums/wedding/0.jpg`} alt="wedding" />
+      <Image src={`/albums/wedding/0.jpg`} alt="wedding" />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-4"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-4"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-3"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-3"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-2"
+      />
+      <Image
+        src={`/albums/wedding/0.jpg`}
+        alt="wedding"
+        className="col-span-6"
+      />
     </main>
   );
+}
+
+{
+  /* <Image src={`/albums/wedding/0.jpg`} alt='wedding' className='col-span-2 h-[368px]' />
+      <Image src={`/albums/wedding/0.jpg`} alt='wedding' className='col-span-2 h-[368px]' />
+      <Image src={`/albums/wedding/0.jpg`} alt='wedding' className='col-span-2 h-[368px]' />
+      <Image src={`/albums/wedding/0.jpg`} alt='wedding' className='col-span-2 h-[368px]' />
+      <Image src={`/albums/wedding/0.jpg`} alt='wedding' className='col-span-2 h-[368px]' />
+      <Image src={`/albums/wedding/0.jpg`} alt='wedding' className='col-span-2 h-[368px]' />
+      <Image src={`/albums/wedding/0.jpg`} alt='wedding' className='col-span-2 h-[368px]' />
+      <Image src={`/albums/wedding/0.jpg`} alt='wedding' className='col-span-2 h-[368px]' />
+      <Image src={`/albums/wedding/0.jpg`} alt='wedding' className='col-span-2 h-[368px]' /> */
 }
