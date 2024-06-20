@@ -1,5 +1,6 @@
 import { useState, lazy, Suspense } from 'react';
 import links from './resource/links.json';
+import Modal from './modal.tsx';
 
 const Travels = lazy(() => import('./travel.tsx'));
 const Wedding = lazy(() => import('./wedding.tsx'));
@@ -24,10 +25,11 @@ function App() {
         </ul>
       </header>
 
-      <Suspense fallback={<h1>Loading....</h1>}>
+      {/* <Suspense fallback={<h1>Loading....</h1>}>
         {navActive === 'travel' && <Travels />}
         {navActive === 'wedding' && <Wedding />}
-      </Suspense>
+      </Suspense> */}
+      <Modal />
     </div>
   );
 }

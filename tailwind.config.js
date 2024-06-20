@@ -9,11 +9,14 @@ export default {
       secondary: ["Great Vibes", 'cursive'],
     },
     screens: {
-      'xs': '340px',
+      'xs': '320px',
       'sm': '435px',
       'md': '768px',
       'lg': '1024px',
       'xl': '1280px',
+      'mobile': '435px',
+      'tablet': '768px',
+      'pc': '1024px',
     },
     extend: {
       height: {
@@ -24,7 +27,7 @@ export default {
         black: {
           DEFAULT: '#333333',
           dark: '#000000',
-          light: '#666666',
+          light: '#374151',
         },
         blue: {
           DEFAULT: '#1F4788',
