@@ -1,4 +1,5 @@
 import { useState, lazy, Suspense } from 'react';
+import { Album } from './types';
 import links from './resource/links.json';
 import Modal from './modal.tsx';
 
@@ -7,6 +8,22 @@ const Wedding = lazy(() => import('./wedding.tsx'));
 
 function App() {
   const [navActive, setNavActive] = useState<string>('travel');
+  const [selectedAlbum, setSelectedAlbum] = useState<Album | undefined>(
+    undefined,
+  );
+
+  const handleSelectMenu = (title: string) => {
+    setNavActive(title);
+    if (title === 'wedding') {
+      setSelectedAlbum({
+        name: 'Hình cưới',
+        album: 'wedding',
+        des: '',
+        created: '20-12-2002',
+        size: 1,
+      });
+    }
+  };
 
   return (
     <div className="h-full w-full p-5 md:px-16 md:py-4 bg-white">
@@ -15,7 +32,7 @@ function App() {
         <ul className="flex gap-8 text-lg self-center p-2">
           {links.map(({ title, label }) => (
             <li
-              onClick={() => setNavActive(title)}
+              onClick={() => handleSelectMenu(title)}
               key={title}
               className={`font-normal hover:cursor-pointer ${navActive === title ? 'activeLinks' : ''}`}
             >
@@ -25,11 +42,18 @@ function App() {
         </ul>
       </header>
 
-      {/* <Suspense fallback={<h1>Loading....</h1>}>
-        {navActive === 'travel' && <Travels />}
+      <Suspense fallback={<h1>Loading....</h1>}>
+        {navActive === 'travel' && (
+          <Travels setSelectedAlbum={setSelectedAlbum} />
+        )}
         {navActive === 'wedding' && <Wedding />}
-      </Suspense> */}
-      <Modal />
+      </Suspense>
+
+      <Modal
+        onClose={() => setSelectedAlbum(undefined)}
+        isOpen={!!selectedAlbum}
+        {...selectedAlbum}
+      />
     </div>
   );
 }

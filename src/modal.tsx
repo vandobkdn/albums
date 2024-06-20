@@ -4,42 +4,25 @@ import Image from './Image';
 interface Props {
   name?: string;
   isOpen?: boolean;
-  images?: string[];
   onClose?: () => void;
+  album?: string;
+  size?: number;
 }
 
-const images = [
-  `/albums/wedding/0.jpg`,
-  `/albums/wedding/1.jpg`,
-  `/albums/wedding/0.jpg`,
-  `/albums/wedding/0.jpg`,
-  `/albums/wedding/0.jpg`,
-  `/albums/wedding/0.jpg`,
-  `/albums/wedding/0.jpg`,
-  `/albums/wedding/0.jpg`,
-  `/albums/wedding/0.jpg`,
-  `/albums/wedding/0.jpg`,
-  `/albums/wedding/0.jpg`,
-  `/albums/wedding/0.jpg`,
-  `/albums/wedding/0.jpg`,
-  `/albums/wedding/0.jpg`,
-  `/albums/wedding/0.jpg`,
-  `/albums/wedding/0.jpg`,
-  `/albums/wedding/0.jpg`,
-  `/albums/wedding/0.jpg`,
-  `/albums/wedding/0.jpg`,
-];
-
 const Modal = ({
-  isOpen = true,
+  isOpen = false,
   onClose,
   name: albumName = 'Hình cưới',
+  album,
+  size,
 }: Props) => {
   const imgRef = useRef<HTMLDivElement>(null);
+  const images = Array.from(
+    { length: size || 0 },
+    (_, index) => `${index}`,
+  ).map((_, index) => `/albums/${album}/${index}.jpg`);
 
-  const [selectedImage, setSelectedImage] = useState<string>(
-    '/albums/wedding/0.jpg',
-  );
+  const [selectedImage, setSelectedImage] = useState<string>(images[0]);
 
   useEffect(() => {
     if (!imgRef.current || !imgRef.current.children) return;
@@ -48,10 +31,17 @@ const Modal = ({
 
     const image = imageList[0] as HTMLImageElement;
     imgRef.current.scrollTo({
-      left: image.offsetWidth * 3,
+      left: image?.offsetWidth * 3,
       behavior: 'smooth',
     });
   }, []);
+
+  useEffect(() => {
+    setSelectedImage(images[0]);
+  }, [albumName]);
+
+  console.log('selectedImage', selectedImage);
+
   return (
     <div
       className={`fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 ${isOpen ? '' : 'hidden'}`}
