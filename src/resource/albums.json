@@ -2,6 +2,7 @@
     {
         "name": "Đà Lạt",
         "album": "dalat",
+        "type": "travel",
         "des": "",
         "created": "20-12-2002",
         "size": 1
@@ -9,6 +10,7 @@
     {
         "name": "Đà Nẵng",
         "album": "danang",
+        "type": "travel",
         "des": "",
         "created": "20-12-2002",
         "size": 1
@@ -16,6 +18,7 @@
     {
         "name": "Huế",
         "album": "hue",
+        "type": "travel",
         "des": "",
         "created": "20-12-2002",
         "size": 1
@@ -23,6 +26,7 @@
     {
         "name": "Phú Quý",
         "album": "phuquy",
+        "type": "travel",
         "des": "",
         "created": "20-12-2002",
         "size": 1
@@ -30,6 +34,7 @@
     {
         "name": "Phú Quốc",
         "album": "phuquoc",
+        "type": "travel",
         "des": "",
         "created": "20-12-2002",
         "size": 1
@@ -37,6 +42,7 @@
     {
         "name": "Cà Mau",
         "album": "camau",
+        "type": "travel",
         "des": "",
         "created": "20-12-2002",
         "size": 1
@@ -44,6 +50,7 @@
     {
         "name": "Phú Yên",
         "album": "phuyen",
+        "type": "travel",
         "des": "",
         "created": "20-12-2002",
         "size": 1
@@ -51,6 +58,7 @@
     {
         "name": "Phan Rang",
         "album": "phanrang",
+        "type": "travel",
         "des": "",
         "created": "20-12-2002",
         "size": 1
@@ -58,6 +66,7 @@
     {
         "name": "Sài Gòn",
         "album": "saigon",
+        "type": "travel",
         "des": "",
         "created": "20-12-2002",
         "size": 1
@@ -65,8 +74,17 @@
     {
         "name": "Bé Gấu",
         "album": "gau",
+        "type": "travel",
         "des": "",
         "created": "21-06-2024",
         "size": 5
+    },
+    {
+        "name": "Hình cưới",
+        "album": "hinhcuoi",
+        "type": "wedding",
+        "des": "Một bộ sưu tập ấn tượng ghi lại những khoảnh khắc đẹp và ý nghĩa nhất trong ngày cưới",
+        "created": "21-06-2024",
+        "size": 1
     }
 ]

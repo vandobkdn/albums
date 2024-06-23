@@ -1,23 +1,35 @@
 import React, { useCallback } from 'react';
+import Albums from './resource/albums.json';
+import Links from './resource/links.json';
 
-import { Album } from './types';
+type Link = 'travel' | 'wedding';
+
+type Album = {
+  name: string;
+  album: string;
+  type: Link;
+  des: string;
+  created: string;
+  size: number;
+};
+
+type NavLink = { title: Link; label: string };
 
 type State = {
-  activeLink: 'travel' | 'wedding';
+  activeLink: Link;
+  navLinks: NavLink[];
   chosenAlbum: Album | undefined;
-  albums: Album[] | undefined;
+  albums: Album[];
 };
 
 type Action =
-  | { type: 'SET_ALBUMS'; payload: Album[] | undefined }
-  | { type: 'SET_ACTIVE_LINK'; payload: 'travel' | 'wedding' }
+  | { type: 'SET_ACTIVE_LINK'; payload: Link }
   | { type: 'SELECT_ALBUM'; payload: Album | undefined };
 
 const Context = React.createContext<
   | {
       state: State;
-      setAlbums: (albums: Album[] | undefined) => void;
-      setActiveLink: (activeLink: 'travel' | 'wedding') => void;
+      setActiveLink: (activeLink: Link) => void;
       selectAlbum: (chosenAlbum: Album | undefined) => void;
     }
   | undefined
@@ -25,13 +37,6 @@ const Context = React.createContext<
 
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
-    case 'SET_ALBUMS': {
-      return {
-        ...state,
-        albums: action.payload,
-      };
-    }
-
     case 'SET_ACTIVE_LINK': {
       return {
         ...state,
@@ -55,14 +60,11 @@ const ContextProvider = ({ children }: { children: React.ReactNode }) => {
   const [state, dispatch] = React.useReducer(reducer, {
     activeLink: 'travel',
     chosenAlbum: undefined,
-    albums: [],
+    albums: Albums as Album[],
+    navLinks: Links as NavLink[],
   });
 
-  const setAlbums = useCallback((albums: Album[] | undefined) => {
-    dispatch({ type: 'SET_ALBUMS', payload: albums });
-  }, []);
-
-  const setActiveLink = useCallback((activeLink: 'travel' | 'wedding') => {
+  const setActiveLink = useCallback((activeLink: Link) => {
     dispatch({ type: 'SET_ACTIVE_LINK', payload: activeLink });
   }, []);
 
@@ -71,7 +73,7 @@ const ContextProvider = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   return (
-    <Context.Provider value={{ state, setAlbums, setActiveLink, selectAlbum }}>
+    <Context.Provider value={{ state, setActiveLink, selectAlbum }}>
       {children}
     </Context.Provider>
   );

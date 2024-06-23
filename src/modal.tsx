@@ -1,21 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from './Image';
+import { useAppContext } from './context';
 
-interface Props {
-  name?: string;
-  isOpen?: boolean;
-  onClose?: () => void;
-  album?: string;
-  size?: number;
-}
-
-const Modal = ({
-  isOpen = false,
-  onClose,
-  name: albumName = 'Hình cưới',
-  album,
-  size,
-}: Props) => {
+const Modal = ({ isOpen = false }: { isOpen: boolean }) => {
+  const {
+    state: { chosenAlbum },
+    selectAlbum,
+  } = useAppContext();
+  const { des, size, album, created, name: albumName } = chosenAlbum || {};
   const imgRef = useRef<HTMLDivElement>(null);
   const images = Array.from(
     { length: size || 0 },
@@ -40,8 +32,6 @@ const Modal = ({
     setSelectedImage(images[0]);
   }, [albumName]);
 
-  console.log('selectedImage', selectedImage);
-
   return (
     <div
       className={`fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 ${isOpen ? '' : 'hidden'}`}
@@ -51,7 +41,7 @@ const Modal = ({
           <h2 className="text-lg font-semibold">{albumName}</h2>
           <button
             className="text-black-light hover:text-black-dark focus:outline-none"
-            onClick={onClose}
+            onClick={() => selectAlbum(undefined)}
           >
             <svg
               className="w-6 h-6 fill-current"
@@ -94,12 +84,9 @@ const Modal = ({
             <h2>
               <strong>Album: </strong> {albumName}
             </h2>
-            <h6>Ngày tạo: 20/12/2024</h6>
+            <h6>Ngày tạo: {created}</h6>
             <h6>Sonny A6400 📸 📸 📸</h6>
-            <p className="border-2 min-h-[6em] rounded-md px-2">
-              Một bộ sưu tập ấn tượng ghi lại những khoảnh khắc đẹp và ý nghĩa
-              nhất trong ngày cưới{' '}
-            </p>
+            <p className="border-2 min-h-[6em] rounded-md px-2">{des}</p>
           </div>
         </div>
       </div>

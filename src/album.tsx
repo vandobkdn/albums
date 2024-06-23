@@ -1,11 +1,16 @@
 import { MouseEventHandler } from 'react';
-import { Album } from './types';
 
-interface Props {
-  onSelect?: MouseEventHandler<HTMLDivElement>;
-}
-
-export default function ({ name, album, created, onSelect }: Album & Props) {
+export default function ({
+  name,
+  album,
+  created,
+  onSelect,
+}: {
+  name: string;
+  album: string;
+  created: string;
+  onSelect: MouseEventHandler<HTMLDivElement>;
+}) {
   return (
     <div
       className="w-full h-[20em] border-2 text-black-dark hover:cursor-pointer relative shadow-md row-span-2"

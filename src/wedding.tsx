@@ -237,15 +237,3 @@ export default function () {
     </main>
   );
 }
-
-{
-  /* <Image src={`/albums/wedding/0.jpg`} alt='wedding' className='col-span-2 h-[368px]' />
-      <Image src={`/albums/wedding/0.jpg`} alt='wedding' className='col-span-2 h-[368px]' />
-      <Image src={`/albums/wedding/0.jpg`} alt='wedding' className='col-span-2 h-[368px]' />
-      <Image src={`/albums/wedding/0.jpg`} alt='wedding' className='col-span-2 h-[368px]' />
-      <Image src={`/albums/wedding/0.jpg`} alt='wedding' className='col-span-2 h-[368px]' />
-      <Image src={`/albums/wedding/0.jpg`} alt='wedding' className='col-span-2 h-[368px]' />
-      <Image src={`/albums/wedding/0.jpg`} alt='wedding' className='col-span-2 h-[368px]' />
-      <Image src={`/albums/wedding/0.jpg`} alt='wedding' className='col-span-2 h-[368px]' />
-      <Image src={`/albums/wedding/0.jpg`} alt='wedding' className='col-span-2 h-[368px]' /> */
-}
