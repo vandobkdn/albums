@@ -23,16 +23,13 @@ export default {
         'content-height': 'calc(100vh - 5rem)',
       },
       colors: {
-        white: '#FFFFFF',
+        white: '#FFF',
         black: {
           DEFAULT: '#333333',
           dark: '#000000',
-          light: '#374151',
+          light: '#f1f1f1',
         },
-        blue: {
-          DEFAULT: '#1F4788',
-          dark: '#003171',
-        },
+        blue: "#0071e3",
       }
     },
   },
