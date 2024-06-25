@@ -77,7 +77,7 @@ export const Logo = () => (
     role="presentation"
     height="43"
     className="app-name kern-safe"
-    width="10em"
+    width="8em"
   >
     <text fill="rgb(110, 110, 115)" x="0" y="29" data-testid="app-logo">
       Bé 🐼 ❤️ Anh 😍

@@ -1,26 +1,31 @@
-import { lazy, Suspense } from 'react';
-import Modal from './modal.tsx';
-import Header from './header.tsx';
+import { lazy } from 'react';
+import { Header } from './components/Header';
+import { NavigationBar } from './components/NavigationBar';
 import { useAppContext } from './context.tsx';
+import { SideBar } from './components/SideBar';
 
-const Travels = lazy(() => import('./travel.tsx'));
+const Travels = lazy(() => import('./components/TravelAlbums'));
 const Wedding = lazy(() => import('./wedding.tsx'));
 
 function App() {
   const {
-    state: { activeLink, chosenAlbum },
+    state: { isOpenNavBar },
   } = useAppContext();
 
   return (
-    <div className="h-full w-full p-5 md:px-16 md:py-4 bg-white">
-      <Header />
+    <div className="root-container">
+      <div className="app-header">
+        <Header />
+      </div>
 
-      <Suspense fallback={<h1>Loading....</h1>}>
-        {activeLink === 'travel' && <Travels />}
-        {activeLink === 'wedding' && <Wedding />}
-      </Suspense>
+      {isOpenNavBar && <SideBar />}
 
-      <Modal isOpen={!!chosenAlbum} />
+      <div className="app-main relative overflow-y-auto px-4">
+        <NavigationBar />
+
+        {/* <Travels /> */}
+        <Wedding />
+      </div>
     </div>
   );
 }

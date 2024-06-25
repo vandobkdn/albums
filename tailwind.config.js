@@ -23,7 +23,11 @@ export default {
         'content-height': 'calc(100vh - 5rem)',
       },
       colors: {
-        white: '#FFF',
+        header: '#f5f5f7',
+        white: {
+          DEFAULT: '#FFF',
+          dark: '#f5f5f7',
+        },
         black: {
           DEFAULT: '#333333',
           dark: '#000000',
