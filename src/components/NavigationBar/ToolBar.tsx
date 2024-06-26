@@ -8,7 +8,7 @@ export const ToolBar = () => {
   } = useAppContext();
 
   return (
-    <div className="flex gap-4 items-center">
+    <div className="flex gap-4 items-center px-4">
       <button
         className="h-[2.6em] flex items-center"
         onClick={() => setIsOpenNavBar(!isOpenNavBar)}

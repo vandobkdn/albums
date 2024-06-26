@@ -3,14 +3,12 @@ import { Header } from './components/Header';
 import { NavigationBar } from './components/NavigationBar';
 import { useAppContext } from './context.tsx';
 import { SideBar } from './components/SideBar';
+import { Gallery } from './components/Gallery/Gallery.tsx';
 
-const Travels = lazy(() => import('./components/TravelAlbums'));
-const Wedding = lazy(() => import('./wedding.tsx'));
+const TravelAlbums = lazy(() => import('./components/TravelAlbums'));
 
 function App() {
-  const {
-    state: { isOpenNavBar },
-  } = useAppContext();
+  const { chosenAlbum, isOpenNavBar } = useAppContext().state;
 
   return (
     <div className="root-container">
@@ -20,11 +18,12 @@ function App() {
 
       {isOpenNavBar && <SideBar />}
 
-      <div className="app-main relative overflow-y-auto px-4">
+      <div className="app-main relative top-[-1px] overflow-y-auto">
         <NavigationBar />
 
-        {/* <Travels /> */}
-        <Wedding />
+        <main className="px-4">
+          {!!chosenAlbum ? <Gallery /> : <TravelAlbums />}
+        </main>
       </div>
     </div>
   );

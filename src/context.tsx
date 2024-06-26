@@ -14,17 +14,20 @@ type State = {
   isOpenNavBar: boolean;
   chosenAlbum: Album | undefined;
   albums: Album[];
+  chosenImage: string | undefined;
 };
 
 type Action =
   | { type: 'SET_OPEN_NAV_BAR'; payload: boolean }
-  | { type: 'SELECT_ALBUM'; payload: Album | undefined };
+  | { type: 'SELECT_ALBUM'; payload: Album | undefined }
+  | { type: 'SELECT_IMAGE'; payload: string | undefined };
 
 const Context = React.createContext<
   | {
       state: State;
       setIsOpenNavBar: (isOpenNavBar: boolean) => void;
       selectAlbum: (chosenAlbum: Album | undefined) => void;
+      selectImage: (chosenImage: string | undefined) => void;
     }
   | undefined
 >(undefined);
@@ -45,6 +48,13 @@ const reducer = (state: State, action: Action): State => {
       };
     }
 
+    case 'SELECT_IMAGE': {
+      return {
+        ...state,
+        chosenImage: action.payload,
+      };
+    }
+
     default:
       return state;
   }
@@ -54,6 +64,7 @@ const ContextProvider = ({ children }: { children: React.ReactNode }) => {
   const [state, dispatch] = React.useReducer(reducer, {
     isOpenNavBar: false,
     chosenAlbum: undefined,
+    chosenImage: undefined,
     albums: Albums as Album[],
   });
 
@@ -65,8 +76,14 @@ const ContextProvider = ({ children }: { children: React.ReactNode }) => {
     dispatch({ type: 'SELECT_ALBUM', payload: chosenAlbum });
   }, []);
 
+  const selectImage = useCallback((chosenImage: string | undefined) => {
+    dispatch({ type: 'SELECT_IMAGE', payload: chosenImage });
+  }, []);
+
   return (
-    <Context.Provider value={{ state, selectAlbum, setIsOpenNavBar }}>
+    <Context.Provider
+      value={{ state, selectAlbum, selectImage, setIsOpenNavBar }}
+    >
       {children}
     </Context.Provider>
   );
