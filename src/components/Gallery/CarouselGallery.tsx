@@ -7,7 +7,7 @@ export const CarouselGallery = () => {
     selectImage,
   } = useAppContext();
 
-  const { photos, name: albumName, createdAt, bio } = chosenAlbum as any;
+  const { photos } = chosenAlbum as any;
 
   const imgRef = useRef<HTMLDivElement>(null);
 
