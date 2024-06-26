@@ -37,6 +37,10 @@ export const ToolBar = () => {
         )}
       </div>
 
+      {
+        isOpenAlbum && (<h2><strong>Album: </strong> {chosenAlbum.name}</h2>)
+      }
+
       {isOpenAlbum && (
         <button className="h-[2.6em] flex items-center ">
           <Icon icon={Icons.Info} classNames="text-blue" />
