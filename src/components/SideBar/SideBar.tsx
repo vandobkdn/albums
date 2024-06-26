@@ -3,10 +3,11 @@ import { useAppContext } from '../../context';
 
 export const SideBar = () => {
   const {
-    state: { albums },
+    state: { albums, chosenAlbum },
     setIsOpenNavBar,
+    selectAlbum,
   } = useAppContext();
-  const travels = albums.filter((album) => album.type === 'travel');
+  const travelAlbums = albums.filter((album) => album.type === 'travel');
 
   return (
     <div className={`fixed inset-0 bg-gray-900 bg-opacity-50 z-50`}>
@@ -20,12 +21,20 @@ export const SideBar = () => {
         <div className="p-2">
           <h2 className="text-black text-md">My Albums</h2>
           <ul className="">
-            {travels.map((item) => (
+            {travelAlbums.map((album) => (
               <li
-                className={`flex gap-2 items-center px-6 py-1 text-sm hover:cursor-pointer hover:bg-header hover:rounded-md`}
+                className={`${chosenAlbum?.name === album.name ? `bg-header rounded-md` : ``} flex gap-2 items-center justify-between px-6 py-1 text-sm hover:cursor-pointer hover:bg-header hover:rounded-md`}
+                onClick={() => {
+                  selectAlbum(album);
+                  setIsOpenNavBar(false);
+                }}
               >
-                <Icon icon={Icons.AlbumIcon} classNames="text-blue" />
-                {item.name}
+                <span className="flex gap-2 items-center">
+                  <Icon icon={Icons.AlbumIcon} classNames="text-blue" />{' '}
+                  {album.name}
+                </span>
+
+                <small className="text-xs text-black">{`${album.photos.length} items`}</small>
               </li>
             ))}
           </ul>

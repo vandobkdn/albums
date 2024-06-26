@@ -1,13 +1,15 @@
 import React, { useCallback } from 'react';
-import Albums from './resource/albums.json';
+import QuyHo from './resource/albums/quyho.json';
+
+const Albums = [QuyHo];
 
 type Album = {
   name: string;
-  album: string;
   type: 'travel' | 'wedding';
-  des: string;
-  created: string;
-  size: number;
+  bio: string;
+  createdAt: string;
+  coverImage: string;
+  photos: string[];
 };
 
 type State = {

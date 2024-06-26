@@ -6,6 +6,7 @@ export const NavigationBar = () => {
     <div className="sticky top-0 shadow-xs z-10">
       <div className="h-full w-full bg-white">
         <ToolBar />
+        <hr />
         <AlbumInfo />
       </div>
     </div>

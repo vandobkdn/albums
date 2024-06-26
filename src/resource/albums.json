@@ -3,9 +3,16 @@
         "name": "Đà Lạt",
         "album": "dalat",
         "type": "travel",
-        "des": "",
-        "created": "20-12-2002",
-        "size": 1
+        "bio": "",
+        "createdAt": "20-12-2002",
+        "coverImage": "",
+        "photos": [
+            {
+                "large": "",
+                "medium": "",
+                "small": ""
+            }
+        ]
     },
     {
         "name": "Đà Nẵng",
