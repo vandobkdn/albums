@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useAppContext } from '../../context';
+import useLoadImages from '../../hooks/useLoadImages';
 
 export const CarouselGallery = () => {
   const {
@@ -7,7 +8,7 @@ export const CarouselGallery = () => {
     selectImage,
   } = useAppContext();
 
-  const { photos } = chosenAlbum as any;
+  const loadedPhotos = useLoadImages({ imageUrls: chosenAlbum?.photos || [] });
 
   const imgRef = useRef<HTMLDivElement>(null);
 
@@ -39,7 +40,7 @@ export const CarouselGallery = () => {
           className="gallery mt-4 h-[5em] pc:w-[20em]"
           ref={imgRef}
         >
-          {photos.map((imgUrl: string, index: number) => (
+          {loadedPhotos.map((imgUrl: string, index: number) => (
             <img key={index} src={imgUrl} onClick={() => selectImage(imgUrl)} />
           ))}
         </div>
