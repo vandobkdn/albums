@@ -13,6 +13,10 @@
   scrollbar-width: none;
 }
 
+body, html {
+  overflow: hidden;
+}
+
 body {
   text-rendering: optimizeLegibility;
 }
