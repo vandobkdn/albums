@@ -27,7 +27,7 @@ export const CarouselGallery = () => {
   return (
     <div className="p-4 flex gap-8 md:gap-16 flex-col justify-center pc:flex-row pc:justify-start xl:justify-start">
       <div id="imageList" className='xl:mx-auto mobile:my-auto'>
-        <div className="mobile:h-[40em] xs:h-[30em] ipPro:h-[38em] tablet:h-[44em] pc:h-[30em] xl:h-[28em] xl:w-[48em]">
+        <div className="mobile:h-[40em] xs:h-[30em] ipPro:h-[30em] tablet:h-[44em] pc:h-[30em] xl:h-[28em] xl:w-[48em]">
           <img
             src={chosenImage}
             alt={chosenImage}

@@ -19,7 +19,7 @@ export const GridGallery = () => {
         <Image
           key={index}
           imgSource={url}
-          coverImageClassName="relative overflow-hidden flex justify-center items-center w-[22em] h-[20em] md:w-[16em]"
+          coverImageClassName="mx-auto relative overflow-hidden flex justify-center items-center w-[22em] h-[20em] md:w-[16em]"
           onSelect={() => selectImage(url)}
         />
         // <div
