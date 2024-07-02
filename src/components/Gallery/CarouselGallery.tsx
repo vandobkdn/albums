@@ -25,9 +25,9 @@ export const CarouselGallery = () => {
   }, []);
 
   return (
-    <div className="p-4 flex gap-8 md:gap-16 flex-col justify-center pc:flex-row pc:justify-start">
-      <div id="imageList">
-        <div className="mobile:h-[20em] tablet:h-[30em] pc:h-[22em] pc:w-[20em] xl:h-[24em]">
+    <div className="p-4 flex gap-8 md:gap-16 flex-col justify-center pc:flex-row pc:justify-start xl:justify-start">
+      <div id="imageList" className='xl:mx-auto mobile:my-auto'>
+        <div className="mobile:h-[40em] xs:h-[30em] ipPro:h-[38em] tablet:h-[44em] pc:h-[30em] xl:h-[28em] xl:w-[48em]">
           <img
             src={chosenImage}
             alt={chosenImage}
@@ -37,7 +37,7 @@ export const CarouselGallery = () => {
 
         <div
           id="gallery"
-          className="gallery mt-4 h-[5em] pc:w-[20em]"
+          className="gallery mt-4 h-[5em] xl:w-[48em]"
           ref={imgRef}
         >
           {loadedPhotos.map((imgUrl: string, index: number) => (

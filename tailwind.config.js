@@ -10,11 +10,12 @@ export default {
     },
     screens: {
       'xs': '320px',
+      'ipPro': '390px',
       'sm': '435px',
       'md': '768px',
       'lg': '1024px',
       'xl': '1280px',
-      'mobile': '435px',
+      'mobile': '414px',
       'tablet': '768px',
       'pc': '1024px',
     },
