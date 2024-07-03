@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 
-import { Image } from '../Image';
 import { useAppContext } from '../../context';
 import useLoadImages from '../../hooks/useLoadImages';
 
