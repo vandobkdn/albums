@@ -49,6 +49,7 @@ const reducer = (state: State, action: Action): State => {
     case 'SELECT_ALBUM': {
       return {
         ...state,
+        chosenImage: undefined,
         chosenAlbum: action.payload,
       };
     }

@@ -12,8 +12,8 @@ export default () => {
 
   return (
     <div className="grid place-content-center gap-y-20 grid-cols-6 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4">
-      {travelAlbums.map((album, index) => (
-        <Thumbnail key={index} {...album} onSelect={() => selectAlbum(album)} />
+      {travelAlbums.map(album => (
+        <Thumbnail key={album.name} {...album} onSelect={() => selectAlbum(album)} />
       ))}
     </div>
   );

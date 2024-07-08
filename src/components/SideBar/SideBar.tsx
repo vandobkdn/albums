@@ -7,6 +7,7 @@ export const SideBar = () => {
     setIsOpenNavBar,
     selectAlbum,
   } = useAppContext();
+
   const travelAlbums = albums.filter((album) => album.type === 'travel');
 
   return (
@@ -23,6 +24,7 @@ export const SideBar = () => {
           <ul className="">
             {travelAlbums.map((album) => (
               <li
+                key={album.name}
                 className={`${chosenAlbum?.name === album.name ? `bg-header rounded-md` : ``} flex gap-2 items-center justify-between px-6 py-1 text-sm hover:cursor-pointer hover:bg-header hover:rounded-md`}
                 onClick={() => {
                   selectAlbum(album);
