@@ -8,7 +8,7 @@ export const AlbumInfo = () => {
     children = (
       <div
         id="album-info"
-        className="xs:hidden md:flex gap-8 items-center justify-center h-full text-black text-sm leading-8 md:w-full"
+        className="xs:hidden sm:hidden md:flex gap-8 items-center justify-center h-full text-black text-sm leading-8 md:w-full"
       >
         <h6>Ngày tạo {chosenAlbum?.createdAt}</h6>
         <h6>Chụp bằng Sonny A6400 📸 📸 📸</h6>
