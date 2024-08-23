@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
 
-const useLoadImages = ({
-  imageUrls,
-  limit = 5,
-}: {
+type Props = {
   imageUrls: string[];
   limit?: number;
-}) => {
+};
+
+const useLoadImages = ({ imageUrls, limit = 5 }: Props) => {
   const [loadedImageUrls, setLoadedImageUrls] = useState<string[]>([]);
   const [loadedImagesCounter, setLoadedImagesCounter] = useState<number>(0);
   const [isLoading, setIsLoading] = useState<boolean>(true);

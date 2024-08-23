@@ -1,16 +1,14 @@
 import { IconCustom } from './Icons.constant';
 
-export function Icon({
-  icon,
-  classNames,
-}: {
+type Props = {
   icon: IconCustom;
   classNames?: string;
-}) {
-  const Icon = icon;
+};
+
+export const Icon = ({ icon: Icon, classNames }: Props) => {
   return (
     <span className={`hover:cursor-pointer ${classNames}`}>
       <Icon />
     </span>
   );
-}
+};

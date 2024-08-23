@@ -23,7 +23,7 @@ export const Image = ({
           alt=""
           className="object-cover w-full h-full"
           onClick={onSelect}
-          loading='lazy'
+          loading="lazy"
           onLoad={() => setIsLoaded(true)}
         />
       </>

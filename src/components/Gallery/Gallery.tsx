@@ -9,11 +9,11 @@ export const Gallery = () => {
 
   useEffect(() => {
     setIsChangeAlbums(true);
-    setTimeout(() => setIsChangeAlbums(false), 500)
-  }, [chosenAlbum])
+    setTimeout(() => setIsChangeAlbums(false), 500);
+  }, [chosenAlbum]);
 
   if (isChangeAlbum) {
-    return <div>Loading....</div>
+    return <div>Loading....</div>;
   }
 
   if (chosenImage && chosenAlbum) {
