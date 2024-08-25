@@ -12,13 +12,11 @@ export const Gallery = () => {
     setTimeout(() => setIsChangeAlbums(false), 500);
   }, [chosenAlbum]);
 
-  if (isChangeAlbum) {
-    return <div>Loading....</div>;
-  }
-
-  if (chosenImage && chosenAlbum) {
-    return <CarouselGallery />;
-  }
-
-  return <GridGallery />;
+  return isChangeAlbum ? (
+    <div>Loading....</div>
+  ) : chosenImage && chosenAlbum ? (
+    <CarouselGallery />
+  ) : (
+    <GridGallery />
+  );
 };

@@ -1,4 +1,5 @@
 import { useAppContext } from '../../context';
+import { View, Text, Clickable } from '../../primitives';
 import { Icon, Icons } from '../Icon';
 
 export const ToolBar = () => {
@@ -17,30 +18,30 @@ export const ToolBar = () => {
   };
 
   return (
-    <div className="flex gap-4 items-center justify-between px-4">
-      <div className="h-[2.6em] flex items-center gap-4">
-        <button
+    <View className="flex gap-4 items-center justify-between px-4">
+      <View className="h-[2.6em] flex items-center gap-4">
+        <Clickable
           className="h-full w-full flex items-center"
           onClick={() => setIsOpenNavBar(!isOpenNavBar)}
         >
           <Icon icon={Icons.NavBar} classNames="text-blue" />
-        </button>
+        </Clickable>
 
         {isOpenAlbum && (
-          <button
+          <Clickable
             className="h-full w-full flex items-center border-l-2"
             onClick={handleBackAction}
           >
             <Icon icon={Icons.LeftArrow} classNames="text-blue ml-2" />{' '}
-            <span className="ml-2 text-blue">Back</span>
-          </button>
+            <Text className="ml-2 text-blue">Back</Text>
+          </Clickable>
         )}
-      </div>
+      </View>
 
       {isOpenAlbum && (
-        <h2>
+        <Text tag="h2">
           <strong>Album: </strong> {chosenAlbum.name}
-        </h2>
+        </Text>
       )}
 
       {isOpenAlbum && (
@@ -48,6 +49,6 @@ export const ToolBar = () => {
           <Icon icon={Icons.Info} classNames="text-blue" />
         </button>
       )}
-    </div>
+    </View>
   );
 };

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 
+import { View, ViewRef } from '../../primitives';
 import { useAppContext } from '../../context';
 import useLoadImages from '../../hooks/useLoadImages';
 
@@ -29,26 +30,26 @@ export const CarouselGallery = () => {
   }, []);
 
   return (
-    <div className="p-4 xs:p-[2px] flex gap-8 md:gap-16 flex-col justify-center pc:flex-row pc:justify-start xl:justify-start">
-      <div id="imageList" className="xl:mx-auto mobile:my-auto">
-        <div className="mobile:h-[30em] xs:h-[30em] ipPro:h-[30em] tablet:h-[44em] pc:h-[30em] xl:h-[28em] xl:w-[48em]">
+    <View className="p-4 xs:p-[2px] flex gap-8 md:gap-16 flex-col justify-center pc:flex-row pc:justify-start xl:justify-start">
+      <View attrs={{ id: 'imageList' }} className="xl:mx-auto mobile:my-auto">
+        <View className="mobile:h-[30em] xs:h-[30em] ipPro:h-[30em] tablet:h-[44em] pc:h-[30em] xl:h-[28em] xl:w-[48em]">
           <img
             src={chosenImage}
             alt={chosenImage}
             className="object-cover h-full w-full"
           />
-        </div>
+        </View>
 
-        <div
-          id="gallery"
+        <ViewRef
+          attrs={{ id: 'gallery' }}
           className="gallery mt-4 h-[5em] xl:w-[48em]"
           ref={imgRef}
         >
           {loadedImageUrls.map((imgUrl: string, index: number) => (
             <img key={index} src={imgUrl} onClick={() => selectImage(imgUrl)} />
           ))}
-        </div>
-      </div>
-    </div>
+        </ViewRef>
+      </View>
+    </View>
   );
 };

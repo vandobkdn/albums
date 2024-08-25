@@ -1,8 +1,9 @@
+import { View } from '../../primitives';
 import { useAppContext } from '../../context';
 
-import { Thumbnail } from './Thumbnail';
+import { Thumbnail } from '../Thumbnail';
 
-export default () => {
+export const TravelAlbums = () => {
   const {
     state: { albums },
     selectAlbum,
@@ -11,14 +12,16 @@ export default () => {
   const travelAlbums = albums.filter((album) => album.type === 'travel');
 
   return (
-    <div className="grid place-content-center gap-y-20 grid-cols-6 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4">
+    <View className="grid place-content-center gap-y-20 grid-cols-6 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4">
       {travelAlbums.map((album) => (
         <Thumbnail
           key={album.name}
-          {...album}
+          name={album.name}
+          coverImage={album.coverImage}
+          size={album.photos.length}
           onSelect={() => selectAlbum(album)}
         />
       ))}
-    </div>
+    </View>
   );
 };

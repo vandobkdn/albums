@@ -1,3 +1,4 @@
+import { View } from '../../primitives';
 import { IconCustom } from './Icons.constant';
 
 type Props = {
@@ -7,8 +8,8 @@ type Props = {
 
 export const Icon = ({ icon: Icon, classNames }: Props) => {
   return (
-    <span className={`hover:cursor-pointer ${classNames}`}>
+    <View tag="span" className={`hover:cursor-pointer ${classNames}`}>
       <Icon />
-    </span>
+    </View>
   );
 };

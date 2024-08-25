@@ -1,4 +1,4 @@
-import { HTMLAttributes } from 'react';
+import { HTMLAttributes, ReactEventHandler } from 'react';
 import classnames from 'classnames';
 
 type Props = {
@@ -9,15 +9,24 @@ type Props = {
   alt?: string;
   className?: string;
   onSelect?: () => void;
+  onLoad?: ReactEventHandler;
 };
 
-export const Image = ({ src, alt, className, attrs, onSelect }: Props) => {
+export const Image = ({
+  src,
+  alt,
+  className,
+  attrs,
+  onSelect,
+  onLoad,
+}: Props) => {
   return (
     <img
       {...attrs}
       src={src}
       alt={alt}
       onClick={onSelect}
+      onLoad={onLoad}
       loading="lazy"
       className={classnames('object-cover w-full h-full', className)}
     />

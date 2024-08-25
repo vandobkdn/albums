@@ -1,12 +1,12 @@
-import { lazy } from 'react';
-import { Header } from './components/Header';
-import { NavigationBar } from './components/NavigationBar';
-import { useAppContext } from './context.tsx';
-import { SideBar } from './components/SideBar';
-import { Gallery } from './components/Gallery/Gallery.tsx';
+import { useAppContext } from './context';
 import { View } from './primitives';
-
-const TravelAlbums = lazy(() => import('./components/TravelAlbums'));
+import {
+  Header,
+  NavigationBar,
+  SideBar,
+  Gallery,
+  TravelAlbums,
+} from './components';
 
 function App() {
   const { chosenAlbum, isOpenNavBar } = useAppContext().state;

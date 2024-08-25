@@ -1,14 +1,15 @@
 import { AlbumInfo } from './AlbumInfo';
 import { ToolBar } from './ToolBar';
+import { View } from '../../primitives';
 
 export const NavigationBar = () => {
   return (
-    <div className="sticky top-0 shadow-xs z-10">
-      <div className="h-full w-full bg-white">
+    <View className="sticky top-0 shadow-xs z-10">
+      <View className="h-full w-full bg-white">
         <ToolBar />
         <hr />
         <AlbumInfo />
-      </div>
-    </div>
+      </View>
+    </View>
   );
 };
