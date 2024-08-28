@@ -5,7 +5,7 @@ type Props = {
   attrs?: HTMLAttributes<HTMLImageElement> & {
     [p: `data-${string}`]: string | undefined;
   };
-  src: string;
+  src: string | undefined;
   alt?: string;
   className?: string;
   onSelect?: () => void;

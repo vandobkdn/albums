@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-import { View, ViewRef } from '../../primitives';
+import { View, ViewRef, Image } from '../../primitives';
 import { useAppContext } from '../../context';
 import useLoadImages from '../../hooks/useLoadImages';
 
@@ -33,11 +33,7 @@ export const CarouselGallery = () => {
     <View className="p-4 xs:p-[2px] flex gap-8 md:gap-16 flex-col justify-center pc:flex-row pc:justify-start xl:justify-start">
       <View attrs={{ id: 'imageList' }} className="xl:mx-auto mobile:my-auto">
         <View className="mobile:h-[30em] xs:h-[30em] ipPro:h-[30em] tablet:h-[44em] pc:h-[30em] xl:h-[28em] xl:w-[48em]">
-          <img
-            src={chosenImage}
-            alt={chosenImage}
-            className="object-cover h-full w-full"
-          />
+          <Image src={chosenImage} alt={chosenImage} />
         </View>
 
         <ViewRef
@@ -46,7 +42,11 @@ export const CarouselGallery = () => {
           ref={imgRef}
         >
           {loadedImageUrls.map((imgUrl: string, index: number) => (
-            <img key={index} src={imgUrl} onClick={() => selectImage(imgUrl)} />
+            <Image
+              key={index}
+              src={imgUrl}
+              onSelect={() => selectImage(imgUrl)}
+            />
           ))}
         </ViewRef>
       </View>
