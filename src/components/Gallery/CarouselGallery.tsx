@@ -33,7 +33,11 @@ export const CarouselGallery = () => {
     <View className="p-4 xs:p-[2px] flex gap-8 md:gap-16 flex-col justify-center pc:flex-row pc:justify-start xl:justify-start">
       <View attrs={{ id: 'imageList' }} className="xl:mx-auto mobile:my-auto">
         <View className="mobile:h-[30em] xs:h-[30em] ipPro:h-[30em] tablet:h-[44em] pc:h-[30em] xl:h-[28em] xl:w-[48em]">
-          <Image src={chosenImage} alt={chosenImage} />
+          <Image
+            src={chosenImage}
+            alt={chosenImage}
+            className="ipPro:!object-contain tablet:!object-contain pc:!object-contain"
+          />
         </View>
 
         <ViewRef
