@@ -1,10 +1,5 @@
 import React, { useCallback } from 'react';
-import QuyHo from './resource/albums/quyho.json';
-import Dalat from './resource/albums/dalat.json';
-import NinhThuan from './resource/albums/ninhthuan.json';
-import ChieuCafe from './resource/albums/chieucafe.json';
-
-const Albums = [QuyHo, Dalat, NinhThuan, ChieuCafe];
+import { Albums } from './albums';
 
 type Album = {
   name: string;
